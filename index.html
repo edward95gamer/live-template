@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>pacuscat live channel</title>
+    <title>Reproducción de Videos Aleatorios</title>
     <style>
         body, html {
             margin: 0;
@@ -37,6 +37,7 @@
         <source src="" type="video/mp4">
     </video>
 
+    <!-- Imagen en la esquina inferior izquierda para pausar y reproducir -->
     <div class="custom-controls">
         <img id="playPauseButton" src="play.png" alt="Play/Pause" width="50" height="50">
     </div>
@@ -47,24 +48,8 @@
     <script>
         // Array de URLs de videos aleatorios
         const videos = [
-            'v/1tt.mp4',
-            'v/2hdh.mp4',
-            'v/3hdh.mp4',
-            'v/4hdh.mp4',
-            'v/5hdh.mp4',
-            'v/6b.mp4',
-            'v/7b.mp4',
-            'v/8b.mp4',
-            'v/9b.mp4',
-            'v/10hdh.mp4',
-            'v/11hdh.mp4',
-            'v/12hdh.mp4',
-            'v/13hdh.mp4',
-            'v/14hdh.mp4',
-            'v/15hdh.mp4',
-            'v/tadc.mp4',
-            'v/patos.mp4',
-            'v/t3.mp4'
+            'video1.mp4',
+            'video2.mp4'
             // Agrega más URLs de videos si es necesario
         ];
 
@@ -91,6 +76,7 @@
             videoPlayer.play();
         });
 
+        // Manejar la funcionalidad de pausa y reproducción con la imagen
         const playPauseButton = document.getElementById('playPauseButton');
         playPauseButton.addEventListener('click', function() {
             if (videoPlayer.paused) {
